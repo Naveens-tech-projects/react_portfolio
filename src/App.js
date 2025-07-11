@@ -19,21 +19,14 @@ const Portfolio = () => {
       description: "End-to-end Salesforce application with custom objects, async Apex, and external API integration for flight details. Built during hackathon with complete automation workflows.",
       tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
       github: "#",
-      demo: "#",
+      demo: "#https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
       type: "Salesforce Development"
     },
+    
     {
-      title: "Integration Hub (In Progress)",
-      description: "Multi-system integration platform using Platform Events, Batch Apex, and REST APIs. Showcases enterprise-level data synchronization patterns.",
-      tech: ["Platform Events", "Batch Apex", "REST API", "JSON Parsing", "Error Handling"],
-      github: "#",
-      demo: "#",
-      type: "Integration & APIs"
-    },
-    {
-      title: "Data Structures & Algorithms",
-      description: "Comprehensive DSA course completion with hands-on problem solving. Strengthening algorithmic thinking and optimization skills.",
-      tech: ["Python", "Algorithms", "Data Structures", "Problem Solving"],
+      title: "Hospital Managment System",
+      description: "Comprehensive salesforce app to manage internal operation of a hosital",
+      tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
       github: "#",
       demo: "#",
       type: "Computer Science"
@@ -48,11 +41,23 @@ const Portfolio = () => {
   ];
 
   const certifications = [
-    {
+     {
       name: "Platform Developer I",
       issuer: "Salesforce",
-      date: "2024",
+      date: "2025",
       verified: true
+    },
+    {
+      name:"Java Data structures and Algorithm Master Class",
+      issuer:"udemy",
+      data:"2024",
+      verified: true
+    },
+    {
+      name:"Python for data science",
+      issuer:"Nptel",
+      data:"2023",
+      verified:true
     }
   ];
 
