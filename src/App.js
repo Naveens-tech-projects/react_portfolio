@@ -476,6 +476,47 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* Experience Section */}
+<section id="experience" style={styles.sectionAlt}>
+  <div style={styles.container}>
+    <h2 style={styles.sectionTitle}>Experience</h2>
+    <div style={{ ...styles.grid, ...styles.gridCols2 }}>
+      
+      {/* Internship Experience */}
+      <div style={styles.card}>
+        <h3 style={styles.cardTitle}>Cognizant Technology Solutions</h3>
+        <span style={styles.badge}>Internship</span>
+        <p style={styles.cardDescription}>
+          Completed a 4-month internship, gaining hands-on experience in the Salesforce ecosystem.  
+          Learned Apex, Lightning Web Components (LWC), SOQL, Flows, and integration concepts.
+        </p>
+        <ul style={{ color: '#d1d5db', fontSize: '0.875rem', marginLeft: '1rem' }}>
+          <li>✔ Developed triggers and asynchronous Apex classes.</li>
+          <li>✔ Built Lightning Web Components for dynamic UIs.</li>
+          <li>✔ Implemented automation using Flows and Process Builder.</li>
+        </ul>
+        <p style={{ fontSize: '0.75rem', color: '#9ca3af', marginTop: '0.5rem' }}>Dec 2025 – Apr 2025</p>
+      </div>
+
+      {/* Project Deployment */}
+      <div style={styles.card}>
+        <h3 style={styles.cardTitle}>Salesforce Project Deployment</h3>
+        <span style={styles.badge}>Full-time Project</span>
+        <p style={styles.cardDescription}>
+          Worked on a live Salesforce project at Cognizant for 3 months, implementing custom business solutions for a client.
+        </p>
+        <ul style={{ color: '#d1d5db', fontSize: '0.875rem', marginLeft: '1rem' }}>
+          <li>✔ Built custom objects and implemented complex validation rules.</li>
+          <li>✔ Created custom Lightning pages using LWC and Aura Components.</li>
+          <li>✔ Created Validation rules and flows to meet the buisness requirements</li>
+        </ul>
+        <p style={{ fontSize: '0.75rem', color: '#9ca3af', marginTop: '0.5rem' }}>May 2025 – Jul 2025</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
       {/* Projects Section */}
       <section id="projects" style={styles.sectionAlt}>
         <div style={styles.container}>
@@ -551,7 +592,7 @@ const Portfolio = () => {
                 </div>
 
                 <div style={styles.projectLinks}>
-                  <a href={project.demo} style={styles.projectLink} target="_blank" rel="noopener noreferrer"  onClick={(e) => e.stopPropagation()}>
+                  <a href={project.demo} style={styles.projectLink} target="_blank" rel="noopener noreferrer"  onClick={(e) => e.stopPropagation()} >
                     <ExternalLink size={16} />
                     <span>Demo</span>
                   </a>
