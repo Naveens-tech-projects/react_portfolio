@@ -16,7 +16,8 @@ const Portfolio = () => {
 const projects = [
   {
     title: "Travel Management System",
-    description: "End-to-end Salesforce application with custom objects, async Apex, and external API integration for flight details. Built during hackathon with complete automation workflows.For demo due to license restrictions use the below username and password.",
+    description: "End-to-end Salesforce application with custom objects, async Apex, and external API integration for flight details. Built during hackathon with complete automation workflows. For demo due to license restrictions use the below username and password.",
+    note: "The project may take a few moments to load. Please be patient.",
     tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
     demo: "https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
     type: "Salesforce Development",
@@ -27,11 +28,11 @@ const projects = [
     title: "Hospital Management System",
     description: "Comprehensive Salesforce app to manage internal operation of a hospital,For demo due to license restrictions use the below username and password.",
     tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
-    github: "#",
-    demo: "https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
+    note: "The project may take a few moments to load. Please be patient.",
+    demo: "https://playful-raccoon-uzwfy3-dev-ed.trailblaze.my.site.com/AiMedico ",
     type: "Computer Science",
-    username: "hospital_admin",
-    password: "hospital@123"
+    username: "test@gmail.com",
+    password: "project123"
   }
 ];
 
@@ -460,6 +461,9 @@ const projects = [
                   <span style={styles.badge}>{project.type}</span>
                 </div>
                 <p style={styles.cardDescription}>{project.description}</p>
+
+                <p style={styles.cardDescription}><mark>{project.note}</mark></p>
+               
                 
                 <p style={{color: '#9ca3af', fontSize: '0.85rem', marginBottom: '0.5rem'}}>
                   <strong>Username:</strong> {project.username}
