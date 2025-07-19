@@ -695,7 +695,7 @@ const Portfolio = () => {
 
       {/* Footer */}
       <footer style={styles.footer}>
-        <p>&copy; 2024 Naveen. Built with React and passion for cloud technology.</p>
+        <p>&copy; 2025 Naveen. Built with React,Please reach out for further details.</p>
       </footer>
     </div>
   );
