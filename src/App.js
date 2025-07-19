@@ -195,13 +195,14 @@ const projects = [
     },
     grid: {
       display: 'grid',
-      gap: '2rem'
+      gap: '6rem',
+      justifyItems: 'center'
     },
     gridCols2: {
       gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'
     },
     gridCols3: {
-      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))'
+      gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))'
     },
     gridCols4: {
       gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))'
