@@ -377,7 +377,7 @@ const Portfolio = () => {
       <nav style={styles.nav}>
         <div style={styles.navContainer}>
           <div style={styles.navLinks}>
-            {['home', 'about', 'projects', 'skills', 'contact'].map((item) => (
+            {['home', 'about','experience', 'projects', 'skills', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
