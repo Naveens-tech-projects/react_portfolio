@@ -18,8 +18,7 @@ const Portfolio = () => {
       title: "Travel Management System",
       description: "End-to-end Salesforce application with custom objects, async Apex, and external API integration for flight details. Built during hackathon with complete automation workflows.",
       tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
-      github: "#",
-      demo: "#https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
+      demo: "https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
       type: "Salesforce Development"
     },
     
