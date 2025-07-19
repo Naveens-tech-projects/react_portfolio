@@ -13,24 +13,27 @@ const Portfolio = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const projects = [
-    {
-      title: "Travel Management System",
-      description: "End-to-end Salesforce application with custom objects, async Apex, and external API integration for flight details. Built during hackathon with complete automation workflows.",
-      tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
-      demo: "https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
-      type: "Salesforce Development"
-    },
-    
-    {
-      title: "Hospital Managment System",
-      description: "Comprehensive salesforce app to manage internal operation of a hosital",
-      tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
-      github: "#",
-      demo: "https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
-      type: "Computer Science"
-    }
-  ];
+const projects = [
+  {
+    title: "Travel Management System",
+    description: "End-to-end Salesforce application with custom objects, async Apex, and external API integration for flight details. Built during hackathon with complete automation workflows.",
+    tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
+    demo: "https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
+    type: "Salesforce Development",
+    username: "travel_admin",
+    password: "travel@123"
+  },
+  {
+    title: "Hospital Management System",
+    description: "Comprehensive Salesforce app to manage internal operation of a hospital",
+    tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
+    github: "#",
+    demo: "https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
+    type: "Computer Science",
+    username: "hospital_admin",
+    password: "hospital@123"
+  }
+];
 
   const skills = [
     { category: "Salesforce", items: ["Apex", "Lightning Web Components", "SOQL", "Triggers", "Flows", "Platform Events"] },
@@ -457,6 +460,13 @@ const Portfolio = () => {
                   <span style={styles.badge}>{project.type}</span>
                 </div>
                 <p style={styles.cardDescription}>{project.description}</p>
+                <p style={styles.cardDescription}>{project.description}</p>
+                <p style={{color: '#9ca3af', fontSize: '0.85rem', marginBottom: '0.5rem'}}>
+                  <strong>Username:</strong> {project.username}
+                </p>
+                <p style={{color: '#9ca3af', fontSize: '0.85rem'}}>
+                  <strong>Password:</strong> {project.password}
+                </p>
                 <div style={styles.techTags}>
                   {project.tech.map((tech, techIndex) => (
                     <span key={techIndex} style={styles.techTag}>{tech}</span>
