@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code, Database, Cloud, Trophy, Calendar, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Code, Database, Cloud, Trophy, Calendar, MapPin, User, Lock, Copy, Check } from 'lucide-react';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [copiedField, setCopiedField] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,28 +14,36 @@ const Portfolio = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-const projects = [
-  {
-    title: "Travel Management System",
-    description: "End-to-end Salesforce application with custom objects, async Apex, and external API integration for flight details. Built during hackathon with complete automation workflows. For demo due to license restrictions use the below username and password.",
-    note: "The project may take a few moments to load. Please be patient.",
-    tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
-    demo: "https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
-    type: "Salesforce Development",
-    username: "test@gmail.com",
-    password: "project123"
-  },
-  {
-    title: "Hospital Management System",
-    description: "Comprehensive Salesforce app to manage internal operation of a hospital,For demo due to license restrictions use the below username and password.",
-    tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
-    note: "The project may take a few moments to load. Please be patient.",
-    demo: "https://playful-raccoon-uzwfy3-dev-ed.trailblaze.my.site.com/AiMedico ",
-    type: "Computer Science",
-    username: "test@gmail.com",
-    password: "project123"
-  }
-];
+  const copyToClipboard = (text, field) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopiedField(field);
+      setTimeout(() => setCopiedField(null), 2000);
+    });
+  };
+
+  const projects = [
+    {
+      title: "Travel Management System",
+      description: "End-to-end Salesforce application with custom objects, async Apex, and external API integration for flight details. Built during hackathon with complete automation workflows.",
+      tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
+      username: "testuser@gmail.com",
+      password: "project123",
+      note:"The project may take a few moments to load. Please be patient.",
+      demo: "https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
+      type: "Salesforce Development"
+    },
+    {
+      title: "Hospital Management System",
+      description: "Comprehensive salesforce app to manage internal operation of a hospital,This project is simple but effecient,built in a really short time for my college project purpose.",
+      note:"The project may take a few moments to load. Please be patient.",
+      tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
+      username: "testuser@gmail.com",
+      password: "project123",
+      github: "#",
+      demo: "https://playful-raccoon-uzwfy3-dev-ed.trailblaze.my.site.com/AiMedico/s/",
+      type: "Computer Science"
+    }
+  ];
 
   const skills = [
     { category: "Salesforce", items: ["Apex", "Lightning Web Components", "SOQL", "Triggers", "Flows", "Platform Events"] },
@@ -44,23 +53,23 @@ const projects = [
   ];
 
   const certifications = [
-     {
+    {
       name: "Platform Developer I",
       issuer: "Salesforce",
       date: "2025",
       verified: true
     },
     {
-      name:"Java Data structures and Algorithm Master Class",
-      issuer:"udemy",
-      data:"2024",
+      name: "Java Data structures and Algorithm Master Class",
+      issuer: "udemy",
+      date: "2024",
       verified: true
     },
     {
-      name:"Python for data science",
-      issuer:"Nptel",
-      data:"2023",
-      verified:true
+      name: "Python for data science",
+      issuer: "Nptel",
+      date: "2023",
+      verified: true
     }
   ];
 
@@ -82,18 +91,10 @@ const projects = [
       width: '100%',
       zIndex: 50,
       transition: 'all 0.3s ease',
-      backgroundColor:'rgba(15, 23, 42, 0.95)',
+      backgroundColor: 'rgba(15, 23, 42, 0.95)',
       backdropFilter: isScrolled ? 'blur(8px)' : 'none',
       boxShadow: isScrolled ? '0 4px 6px rgba(0, 0, 0, 0.1)' : 'none'
     },
-
-    nameLogo: { // New style for your name
-  fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
-      fontWeight: 'bold',
-      background: 'linear-gradient(90deg, rgb(255, 255, 255), rgb(14, 52, 98), rgb(58, 13, 238))',
-      WebkitBackgroundClip: 'text',
-      WebkitTextFillColor: 'transparent'
-},
     navContainer: {
       maxWidth: '1200px',
       margin: '0 auto',
@@ -102,7 +103,6 @@ const projects = [
       justifyContent: 'space-between',
       alignItems: 'center'
     },
-    // Removed the 'logo' style block
     navLinks: {
       display: 'flex',
       gap: '2rem'
@@ -124,18 +124,12 @@ const projects = [
       padding: '0 1.5rem',
       textAlign: 'center'
     },
-    avatar: {
-      width: '8rem',
-      height: '8rem',
-      margin: '0 auto 1.5rem',
-      background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-      borderRadius: '50%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontSize: '2.5rem',
-      marginTop: '5rem',
-      fontWeight: 'bold'
+    nameLogo: {
+      fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
+      fontWeight: 'bold',
+      background: 'linear-gradient(90deg, rgb(255, 255, 255), rgb(14, 52, 98), rgb(58, 13, 238))',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent'
     },
     heroTitle: {
       fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
@@ -183,7 +177,6 @@ const projects = [
       padding: '5rem 1.5rem',
       backgroundColor: 'rgba(30, 41, 59, 0.3)'
     },
-    // The duplicate 'container' style block was removed. Keeping the first one.
     sectionTitle: {
       fontSize: '2.5rem',
       fontWeight: 'bold',
@@ -195,14 +188,13 @@ const projects = [
     },
     grid: {
       display: 'grid',
-      gap: '6rem',
-      justifyItems: 'center'
+      gap: '2rem'
     },
     gridCols2: {
       gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'
     },
     gridCols3: {
-      gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))'
+      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'
     },
     gridCols4: {
       gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))'
@@ -249,6 +241,52 @@ const projects = [
       color: '#c4b5fd',
       padding: '0.25rem 0.5rem',
       borderRadius: '0.25rem'
+    },
+    credentialsSection: {
+      backgroundColor: 'rgba(15, 23, 42, 0.5)',
+      borderRadius: '0.5rem',
+      padding: '1rem',
+      marginBottom: '1rem',
+      border: '1px solid #334155'
+    },
+    credentialsTitle: {
+      fontSize: '0.875rem',
+      fontWeight: '600',
+      color: '#60a5fa',
+      marginBottom: '0.75rem',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '0.5rem'
+    },
+    credentialItem: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      marginBottom: '0.5rem',
+      padding: '0.5rem',
+      backgroundColor: 'rgba(30, 41, 59, 0.3)',
+      borderRadius: '0.25rem'
+    },
+    credentialLabel: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '0.5rem',
+      fontSize: '0.875rem',
+      color: '#d1d5db'
+    },
+    credentialValue: {
+      fontFamily: 'monospace',
+      fontSize: '0.875rem',
+      color: '#e2e8f0'
+    },
+    copyButton: {
+      background: 'none',
+      border: 'none',
+      color: '#9ca3af',
+      cursor: 'pointer',
+      padding: '0.25rem',
+      borderRadius: '0.25rem',
+      transition: 'color 0.3s ease'
     },
     projectLinks: {
       display: 'flex',
@@ -338,7 +376,6 @@ const projects = [
       {/* Navigation */}
       <nav style={styles.nav}>
         <div style={styles.navContainer}>
-          {/* Removed the logo div here */}
           <div style={styles.navLinks}>
             {['home', 'about', 'projects', 'skills', 'contact'].map((item) => (
               <button
@@ -462,26 +499,59 @@ const projects = [
                   <span style={styles.badge}>{project.type}</span>
                 </div>
                 <p style={styles.cardDescription}>{project.description}</p>
-
-                <p style={styles.cardDescription}><mark style={{ backgroundColor: '#a855f7', color: 'white', padding: '2px 4px', borderRadius: '4px' }}>
+                  <p style={styles.cardDescription}><mark style={{ backgroundColor: '#a855f7', color: 'white', padding: '2px 4px', borderRadius: '4px' }}>
                 {project.note}
                   </mark></p>
-               
-                
-                <p style={{color: '#9ca3af', fontSize: '0.85rem', marginBottom: '0.5rem'}}>
-                  <strong>Username:</strong> {project.username}
-                </p>
-                <p style={{color: '#9ca3af', fontSize: '0.85rem'}}>
-                  <strong>Password:</strong> {project.password}
-                </p>
                 <div style={styles.techTags}>
                   {project.tech.map((tech, techIndex) => (
                     <span key={techIndex} style={styles.techTag}>{tech}</span>
                   ))}
                 </div>
+                
+                {/* Credentials Section */}
+                <div style={styles.credentialsSection}>
+                  <div style={styles.credentialsTitle}>
+                    <Lock size={16} />
+                    Demo Credentials
+                  </div>
+                  <div style={styles.credentialItem}>
+                    <div style={styles.credentialLabel}>
+                      <User size={14} />
+                      Username:
+                    </div>
+                    <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+                      <span style={styles.credentialValue}>{project.username}</span>
+                      <button
+                        onClick={() => copyToClipboard(project.username, `${index}-username`)}
+                        style={styles.copyButton}
+                        onMouseEnter={(e) => e.target.style.color = '#60a5fa'}
+                        onMouseLeave={(e) => e.target.style.color = '#9ca3af'}
+                      >
+                        {copiedField === `${index}-username` ? <Check size={14} /> : <Copy size={14} />}
+                      </button>
+                    </div>
+                  </div>
+                  <div style={styles.credentialItem}>
+                    <div style={styles.credentialLabel}>
+                      <Lock size={14} />
+                      Password:
+                    </div>
+                    <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+                      <span style={styles.credentialValue}>{project.password}</span>
+                      <button
+                        onClick={() => copyToClipboard(project.password, `${index}-password`)}
+                        style={styles.copyButton}
+                        onMouseEnter={(e) => e.target.style.color = '#60a5fa'}
+                        onMouseLeave={(e) => e.target.style.color = '#9ca3af'}
+                      >
+                        {copiedField === `${index}-password` ? <Check size={14} /> : <Copy size={14} />}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
                 <div style={styles.projectLinks}>
-                  
-                  <a href={project.demo} style={styles.projectLink}>
+                  <a href={project.demo} style={styles.projectLink} target="_blank" rel="noopener noreferrer">
                     <ExternalLink size={16} />
                     <span>Demo</span>
                   </a>
@@ -518,7 +588,7 @@ const projects = [
           {/* Certifications */}
           <div style={{textAlign: 'center'}}>
             <h3 style={{fontSize: '1.5rem', fontWeight: '600', marginBottom: '2rem'}}>Certifications</h3>
-            <div style={{display: 'flex', justifyContent: 'center'}}>
+            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1rem'}}>
               {certifications.map((cert, index) => (
                 <div key={index} style={styles.certCard}>
                   <div style={styles.certHeader}>
@@ -563,28 +633,28 @@ const projects = [
               <span>Send Email</span>
             </a>
             <a
-  href="https://www.linkedin.com/in/inboxnaveen" // Added https://
-  style={{...styles.contactButton, ...styles.contactButtonSecondary}}
->
-  <Linkedin size={20} />
-  <span>LinkedIn</span>
-</a>
-         <a
-  href="https://leetcode.com/u/naveen_program_scripts/" // Use this URL
-  style={{...styles.contactButton, ...styles.contactButtonSecondary}}
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Code size={20} />
-  <span>LeetCode</span>
-</a>
+              href="https://www.linkedin.com/in/inboxnaveen"
+              style={{...styles.contactButton, ...styles.contactButtonSecondary}}
+            >
+              <Linkedin size={20} />
+              <span>LinkedIn</span>
+            </a>
+            <a
+              href="https://leetcode.com/u/naveen_program_scripts/"
+              style={{...styles.contactButton, ...styles.contactButtonSecondary}}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Code size={20} />
+              <span>LeetCode</span>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer style={styles.footer}>
-        <p>&copy; 2024 Your Name. Built with React and passion for cloud technology.</p>
+        <p>&copy; 2024 Naveen. Built with React and passion for cloud technology.</p>
       </footer>
     </div>
   );
