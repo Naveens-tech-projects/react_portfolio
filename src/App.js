@@ -27,7 +27,7 @@ const Portfolio = () => {
       description: "Comprehensive salesforce app to manage internal operation of a hosital",
       tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
       github: "#",
-      demo: "https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/login/?ec=302&startURL=%2FWanderRoasterLwc%2Fs%2F",
+      demo: "https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
       type: "Computer Science"
     }
   ];
