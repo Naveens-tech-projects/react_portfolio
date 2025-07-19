@@ -551,7 +551,7 @@ const Portfolio = () => {
                 </div>
 
                 <div style={styles.projectLinks}>
-                  <a href={project.demo} style={styles.projectLink} target="_blank" rel="noopener noreferrer">
+                  <a href={project.demo} style={styles.projectLink} target="_blank" rel="noopener noreferrer"  onClick={(e) => e.stopPropagation()}>
                     <ExternalLink size={16} />
                     <span>Demo</span>
                   </a>
