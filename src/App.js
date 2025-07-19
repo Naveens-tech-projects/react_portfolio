@@ -348,7 +348,7 @@ const Portfolio = () => {
       textDecoration: 'none',
       transition: 'all 0.3s ease',
       fontSize: 'clamp(0.9rem, 3vw, 1rem)',
-      width: 'min(90%, 300px)',
+      width: 'min(70%, 200px)',
       justifyContent: 'center'
     },
     contactButtonPrimary: {
