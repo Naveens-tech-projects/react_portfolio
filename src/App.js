@@ -462,7 +462,9 @@ const projects = [
                 </div>
                 <p style={styles.cardDescription}>{project.description}</p>
 
-                <p style={styles.cardDescription}><mark>{project.note}</mark></p>
+                <p style={styles.cardDescription}><mark style={{ backgroundColor: '#a855f7', color: 'white', padding: '2px 4px', borderRadius: '4px' }}>
+                {project.note}
+                  </mark></p>
                
                 
                 <p style={{color: '#9ca3af', fontSize: '0.85rem', marginBottom: '0.5rem'}}>
