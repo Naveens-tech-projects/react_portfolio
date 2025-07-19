@@ -16,16 +16,16 @@ const Portfolio = () => {
 const projects = [
   {
     title: "Travel Management System",
-    description: "End-to-end Salesforce application with custom objects, async Apex, and external API integration for flight details. Built during hackathon with complete automation workflows.",
+    description: "End-to-end Salesforce application with custom objects, async Apex, and external API integration for flight details. Built during hackathon with complete automation workflows.For demo due to license restrictions use the below username and password.",
     tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
     demo: "https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
     type: "Salesforce Development",
-    username: "travel_admin",
-    password: "travel@123"
+    username: "test@gmail.com",
+    password: "project123"
   },
   {
     title: "Hospital Management System",
-    description: "Comprehensive Salesforce app to manage internal operation of a hospital",
+    description: "Comprehensive Salesforce app to manage internal operation of a hospital,For demo due to license restrictions use the below username and password.",
     tech: ["Salesforce", "Apex", "Lightning Web Components", "REST API", "Async Processing"],
     github: "#",
     demo: "https://brave-koala-adftk0-dev-ed.trailblaze.my.site.com/WanderRoasterLwc/s/",
@@ -460,7 +460,7 @@ const projects = [
                   <span style={styles.badge}>{project.type}</span>
                 </div>
                 <p style={styles.cardDescription}>{project.description}</p>
-                <p style={styles.cardDescription}>{project.description}</p>
+                
                 <p style={{color: '#9ca3af', fontSize: '0.85rem', marginBottom: '0.5rem'}}>
                   <strong>Username:</strong> {project.username}
                 </p>
