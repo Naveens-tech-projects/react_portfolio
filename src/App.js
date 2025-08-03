@@ -618,7 +618,7 @@ const Portfolio = () => {
         <nav style={styles.nav}>
           <div style={styles.navContainer} className="nav-container">
             <div style={styles.navLinks} className="nav-links">
-              {['home', 'about', 'experience','certifications', 'projects', 'skills', 'contact'].map((item) => (
+              {['home', 'about', 'experience', 'projects', 'skills', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -939,7 +939,6 @@ const Portfolio = () => {
                 </div>
               ))}
             </div>
-            <section id="certifications">
             <div style={{textAlign: 'center'}}>
               <h3 style={{fontSize: 'clamp(1.25rem, 3vw, 1.5rem)', fontWeight: '600', marginBottom: '2rem'}}>Certifications</h3>
               <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1rem'}}>
@@ -995,7 +994,6 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-        </section>
         </section>
 
         <section id="contact" style={styles.sectionAlt} className="section-alt">
